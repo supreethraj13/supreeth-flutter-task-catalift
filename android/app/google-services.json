@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "92659577777",
+    "project_id": "catalift-8cf6e",
+    "storage_bucket": "catalift-8cf6e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92659577777:android:ec2e2b96dc58860f218390",
+        "android_client_info": {
+          "package_name": "com.example.catalift_assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXxh8c4rtDwyPWaaJIyedVaioG_F4DbBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
