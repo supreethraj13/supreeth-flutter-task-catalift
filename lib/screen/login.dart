@@ -10,7 +10,7 @@ class loginscreen extends StatefulWidget {
 }
 
 class _nameState extends State<loginscreen> {
-  final phonecontroller = TextEditingController();
+  final emailcontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
   final purpleColor = Color(0xFF3D0075);
   @override
@@ -26,7 +26,7 @@ class _nameState extends State<loginscreen> {
               child: Image.asset(
                 'lib/assets/logo.png', // Replace with your asset path
                 width: double.infinity,
-                fit: BoxFit.fitWidth,   
+                fit: BoxFit.fitWidth,
               ),
             ),
 
@@ -61,10 +61,7 @@ class _nameState extends State<loginscreen> {
                     'Sign-In',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text(
-                    'Privacy Policy',
-                    style: TextStyle(color: purpleColor),
-                  ),
+                  Text('Privacy Policy', style: TextStyle(color: purpleColor)),
                 ],
               ),
             ),
@@ -75,13 +72,12 @@ class _nameState extends State<loginscreen> {
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'Phone Number',
+                  hintText: 'Email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                keyboardType: TextInputType.phone,
-                controller: phonecontroller,
+                controller: emailcontroller,
               ),
             ),
             SizedBox(height: 12),
@@ -128,15 +124,14 @@ class _nameState extends State<loginscreen> {
                     ),
                   ),
                   onPressed: () {
-                    final phone = phonecontroller.text.trim();
-                      final password = passwordcontroller.text.trim();
-                      Provider.of<AuthProvider>(context, listen: false)
-                          .signIn(phone, password, context);
+                    final email = emailcontroller.text.trim();
+                    final password = passwordcontroller.text.trim();
+                    Provider.of<AuthProvider>(
+                      context,
+                      listen: false,
+                    ).signIn(email, password, context);
                   },
-                  child: Text(
-                    'Sign-In',
-                    style: TextStyle(fontSize: 16),
-                  ),
+                  child: Text('Sign-In', style: TextStyle(fontSize: 16)),
                 ),
               ),
             ),
@@ -155,11 +150,11 @@ class _nameState extends State<loginscreen> {
                         color: purpleColor,
                         fontWeight: FontWeight.bold,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
